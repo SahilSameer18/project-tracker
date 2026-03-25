@@ -1,6 +1,6 @@
 📊 Project Tracker
 
-A simple and intuitive project tracking web application to help you organize, manage, and monitor your tasks and projects efficiently. Built with modern web technologies and deployed for easy access.
+A simple and intuitive project tracking web application to help you organize, manage, and monitor your tasks and projects efficiently.
 
 🔗 Live Demo: https://project-tracker-rho-murex.vercel.app/
 
@@ -9,71 +9,77 @@ A simple and intuitive project tracking web application to help you organize, ma
 🚀 Features
 🗂️ Create and manage projects
 ✅ Add, edit, and delete tasks
-📈 Track progress of each project
-🧾 Clean and responsive UI
-⚡ Fast performance with modern tooling
-🌐 Deployed and accessible online
+📈 Track project progress
+🧾 Clean, responsive UI
+⚡ Fast performance with Vite
+🌐 Deployed on Vercel
 🛠️ Tech Stack
 Frontend: React + TypeScript
 Build Tool: Vite
 Styling: CSS
 Deployment: Vercel
 📦 Installation & Setup
-
-Follow these steps to run the project locally:
-
 1. Clone the repository
 git clone https://github.com/SahilSameer18/project-tracker.git
-2. Navigate to the project directory
+2. Navigate into the project
 cd project-tracker
 3. Install dependencies
 npm install
-4. Start the development server
+▶️ Running the App (Development)
 npm run dev
-5. Open in browser
-
-Visit:
-
+The app will start on:
 http://localhost:5173
-🏗️ Build for Production
+
+⚠️ Vite typically runs on port 5173 by default. If that port is occupied, it may switch to another available port, which will be shown in the terminal.
+
+🏗️ Production Build
 npm run build
 
-To preview the production build:
+This generates an optimized production build in the dist/ folder.
 
+Preview production build locally:
 npm run preview
-📁 Project Structure
-project-tracker/
-├── public/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── styles/
-│   ├── App.tsx
-│   └── main.tsx
-├── index.html
-├── package.json
-├── tsconfig.json
-└── vite.config.ts
-🌍 Deployment
+Preview server usually runs on:
+http://localhost:4173
+📜 Available Scripts
+Script	Description
+npm run dev	Start development server
+npm run build	Build production-ready app
+npm run preview	Preview production build locally
+npm run lint	Run lint checks (if configured)
+🌐 Environment Variables
 
-This project is deployed using Vercel.
-Any updates pushed to the main branch can be automatically deployed if connected.
+If your project uses environment variables, create a .env file in the root:
 
-🤝 Contributing
+VITE_API_URL=your_api_url_here
 
-Contributions are welcome!
+⚠️ Vite requires environment variables to be prefixed with VITE_.
 
-Fork the repository
+🧾 Logging & Debugging
+Logs appear directly in the browser console (DevTools → Console).
+Use:
+console.log() for general debugging
+console.error() for error tracking
+For network/API debugging, use the Network tab in browser DevTools.
+Example:
+console.log("Project data:", projectData);
+console.error("Failed to fetch tasks");
+⚙️ Port Configuration
+Default dev port: 5173
+Preview port: 4173
 
-Create a new branch
+To manually specify a port:
 
-git checkout -b feature/your-feature-name
-Commit your changes
-Push to your branch
-Open a Pull Request
-📌 Future Improvements
-Authentication system (login/signup)
-Backend integration with database
-Drag-and-drop task management
-Priority & due date filters
-Notifications / reminders
+npm run dev -- --port 3000
+
+Development Notes
+Ensure Node.js (v16 or higher recommended) is installed.
+Use a modern browser (Chrome, Edge, Firefox) for best performance.
+Hot Module Replacement (HMR) is enabled in development for fast updates.
+ESLint/TypeScript errors (if enabled) will appear in the terminal and editor.
+🚀 Deployment
+
+This project is deployed on Vercel.
+
+Push changes to the repository
+Vercel automatically rebuilds and deploys the latest version
